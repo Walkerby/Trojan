@@ -105,7 +105,7 @@ elif [ "$release" == "ubuntu" ]; then
     systemctl disable ufw
     apt-get update
 fi
-$systemPackage -y install  nginx wget unzip zip curl tar >/dev/null 2>&1
+$systemPackage -y install nginx wget unzip zip curl tar iputils-ping>/dev/null 2>&1
 systemctl enable nginx.service
 green "======================="
 yellow "请输入绑定到本VPS的域名"
